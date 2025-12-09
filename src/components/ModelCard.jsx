@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './ModelCard.css'
 
-export default function ModelCard({ name, previewUrl, meshVideo, rfVideo, glbUrl, plyUrl }) {
+export default function ModelCard({ name, previewUrl, meshVideo, rfVideo, glbUrl }) {
   const [showRf, setShowRf] = useState(true)
 
   const displayName = name.replace(/_/g, ' ')
@@ -30,9 +30,6 @@ export default function ModelCard({ name, previewUrl, meshVideo, rfVideo, glbUrl
           <div className="download-links">
             {glbUrl && (
               <a href={glbUrl} download className="download-link">GLB</a>
-            )}
-            {plyUrl && (
-              <a href={plyUrl} download className="download-link">PLY</a>
             )}
           </div>
         </div>
